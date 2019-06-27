@@ -1,0 +1,31 @@
+class Triple {
+  static triple(n) {
+    if (n === undefined) {
+      n = 1;
+    }
+    return n * 3;
+  }
+  getSum() {
+    return 5;
+  }
+
+}
+
+let one = new Triple();
+
+class Two extends Triple {
+  static getData() {
+    return super.triple() + 9;
+  }
+
+}
+
+
+console.log(Triple.triple()); // 3
+//console.log(Triple.getSum()); // error
+
+console.log(one.getSum()); // 5
+//console.log(one.triple()); // error
+console.log(Two.getData());
+console.log(Two.triple());
+//console.log(Two.getSum()); //error
